@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2'
 import BackgroundVideo from "./BackgroundVideo" 
+import GitHubLink from "./GitHubLink";
 
 // Función para eliminar etiquetas HTML
 const sanitizeText = (text) => {
@@ -292,6 +293,11 @@ export function Quiz(){
                     <br /><br />
 
                     <button onClick={startQuiz}>{t('quiz.startQuiz')}</button>
+                    <div className="github-link">
+                        <a href="https://github.com/dgp04/Quiz-Game" target="_blank" id="link">
+                            <GitHubLink/>
+                        </a>
+                    </div>
                 </div>
             </BackgroundVideo>
         );
@@ -316,17 +322,43 @@ export function Quiz(){
             );
         }
         
+        const categoryColors = {
+            science: "green", // Color amarillo para ciencia
+            history: "yellow",  // Color rojo para historia
+            geography: "blue", // Color azul para geografía
+            sports: "orange",  // Color verde para deportes
+            entertainment: "pink",
+            art: "red", 
+            politics: "yellow",
+            knowledge: "black",
+            celebrities: "pink",
+            mythology: "yellow",
+            animals: "green",
+            vehicles: "black"
+        };
+
+        const getCategoryColor = (category) => {
+            const currentCategory = category.toLowerCase()
+
+            if (currentCategory.includes('entertainment')) {
+                return categoryColors['entertainment']; // Asigna un color común a todas las categorías de entretenimiento
+            }
+
+            if(currentCategory.includes("science")){
+                return categoryColors["science"]
+            }
+            return categoryColors[currentCategory] || 'grey'; // Si no es entretenimiento, usa el color de la categoría o blanco por defecto
+        }
 
         return (
             <BackgroundVideo category={currentQuestion.questionCategory}>
                 <div className="quiz-game-container">
-                    <h2>Difficulty: {currentQuestion.questionDifficulty}</h2>
                     <div className="quiz-game">
                         {
                             questions.length > 0 ? (
                                 <div>
-                                    <div className="question-info">
-                                        <h2>{sanitizeText(currentQuestion.questionCategory)}</h2>
+                                    <div className="question-info" style={{backgroundColor: getCategoryColor(currentQuestion.questionCategory)}}>
+                                        <h2 className="question-category">{sanitizeText(currentQuestion.questionCategory)}</h2>
                                         <h2>{currentQuestionIndex + 1} / {questions.length}</h2>
                                     </div>
                                     <div className="question-container">

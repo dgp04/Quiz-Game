@@ -105,11 +105,15 @@ body {
   display: flex;
   text-align: center;
   align-items: center;
-  justify-content: space-between; 
-  gap: 5  px;
   background-color: orange;
   width: 100%;
-} 
+  border-radius: 5px 5px 0 0;
+  text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px  1px 0 #000,
+        1px  1px 0 #000;
+}
 
 .question-info button{
   width: 15%;
@@ -130,6 +134,7 @@ body {
   background-color: white;
   color: black;
   padding-bottom: 20px;
+  border-radius: 0 0 5px 5px;
 }
 
 .progress-bar-container{
@@ -245,4 +250,164 @@ body {
   max-width: 400px;
   width: 100%;
   text-align: center;
+}
+
+.github-link{
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  cursor: default;
+}
+
+.github-link img{
+  border-radius: 5px;
+  padding: 5px;
+  transition: background-color .3s ease;
+}
+
+.github-link img:hover{
+  background-color: #0c1728;
+  color: white;
+}
+
+/* Para pantallas pequeñas (hasta 768px de ancho) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    font-size: 20px; /* Reducir tamaño de fuente para pantallas más pequeñas */
+  }
+
+  .background-video {
+    /* Asegurar que el video ocupe el 100% del ancho y alto de la pantalla */
+    width: 100%;
+    height: 100vh; /* Alto igual al de la pantalla */
+    object-fit: cover; /* Mantener el aspecto del video, cortando lo que no quepa */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Asegurarse de que el video esté en el fondo */
+  }
+
+  .quiz-config {
+    padding: 15px; /* Reducir padding */
+    width: 500px;
+  }
+
+  /* Ajustar el tamaño del botón de info */
+  #info-button img {
+    width: 30px; /* Reducir tamaño del icono en pantallas pequeñas */
+  }
+
+  /* Ajustar el título */
+  h1 {
+    font-size: 3em; /* Reducir tamaño del título */
+    margin-bottom: 10px;
+  }
+
+  /* Ajustar los inputs y selects para que ocupen el 100% */
+  .quiz-config select {
+    width: 100%;
+    padding: 8px;
+  }
+
+  /* Centrar el contenido en pantallas pequeñas */
+  .quiz-config select, .quiz-config input {
+    font-size: 17px;
+  }
+
+  .quiz-config label {
+    font-size: 17px;
+  }
+
+  /* Ajustar el padding de los botones */
+  .quiz-config button {
+    padding: 10px 0;
+  }
+
+  /* Hacer que los inputs y botones ocupen toda la anchura */
+  .quiz-config select{
+    width: 100%;
+  }
+
+  /* Ajustar el contenedor del enlace de GitHub */
+  .github-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ajustar el icono de GitHub */
+  #icon {
+    width: 50px;
+  }
+}
+
+/* Para pantallas pequeñas (hasta 600px de ancho) */
+@media (max-width: 600px) {
+  .quiz-config {
+    padding: 15px; /* Padding moderado para pantallas pequeñas */
+    font-size: 14px; /* Tamaño de texto más pequeño */
+  }
+
+  h1 {
+    font-size: 22px; /* Reducir un poco el tamaño del título */
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 18px; /* Ajuste del tamaño de h2 */
+  }
+
+  /* Ajustar los inputs, selects y botones */
+  .quiz-config select{
+    width: 100%; /* Asegurar que ocupen toda la anchura disponible */
+    padding: 8px; /* Padding más pequeño */
+    font-size: 14px; /* Tamaño de fuente ajustado */
+  }
+
+  .quiz-config button {
+    font-size: 14px; /* Reducir el tamaño de los botones */
+    padding: 10px 0; /* Padding moderado en botones */
+  }
+
+  /* Ajustar el icono de GitHub */
+  #icon {
+    width: 40px; /* Reducir el tamaño del icono */
+    height: auto;
+  }
+
+  /* Ajustar el enlace de GitHub */
+  .github-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .background-video {
+    /* Asegurar que el video ocupe el 100% del ancho y alto de la pantalla */
+    width: 100%;
+    height: 100vh; /* Alto igual al de la pantalla */
+    object-fit: cover; /* Mantener el aspecto del video, cortando lo que no quepa */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Asegurarse de que el video esté en el fondo */
+  }
+
+  .quiz-game-container {
+    width: 100%;  /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+    max-width: 87%;  /* Elimina cualquier límite de ancho máximo que pueda haber */
+    padding: 10px;  /* Añade algo de espacio interno para que no toque los bordes */
+    box-sizing: border-box;  /* Asegura que el padding se incluya en el tamaño total */
+  }
+
+  /* Opcional: Reducir el tamaño de fuente para las preguntas */
+  .quiz-game-container h2 {
+    font-size: 16px; /* Ajustar el tamaño de las preguntas */
+  }
+
+  /* Ajustar los botones dentro del contenedor */
+  .quiz-game-container button {
+    width: 100%;  /* Los botones ocupan todo el ancho disponible */
+    padding: 8px;  /* Reducir el padding para que no sean tan grandes */
+  }
 }
