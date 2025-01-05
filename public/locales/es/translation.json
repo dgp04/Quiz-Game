@@ -1,0 +1,19 @@
+{
+    "quiz": {
+        "title": "Juego de Preguntas",
+        "setup": "Configura tu cuestionario",
+        "selectLanguage": "Selecciona el idioma:",
+        "selectCategory": "Selecciona la categoría:",
+        "numberOfQuestions": "Número de preguntas:",
+        "startQuiz": "Comenzar Cuestionario",
+        "question": "Pregunta",
+        "endOfQuiz": "¡Fin del cuestionario! Tu puntuación es:",
+        "anyCategory": "Cualquier Categoría",
+        "mainMenu": "Volver al menú principal",
+        "nextQuestion": "Siguiente Pregunta",
+        "backToMenu": "Volver al menú principal",
+        "endQuiz": "Finalizar Quiz",
+        "returningToMenuIn": "Volviendo al menú principal en ",
+        "seconds": "segundos"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "quiz": {
+        "title": "Jeu de Quiz",
+        "setup": "Configurez votre quiz",
+        "selectLanguage": "Sélectionnez la langue:",
+        "selectCategory": "Sélectionnez la catégorie:",
+        "numberOfQuestions": "Nombre de questions:",
+        "startQuiz": "Commencer le Quiz",
+        "question": "Question",
+        "endOfQuiz": "Fin du quiz! Votre score est:",
+        "anyCategory": "Toute catégorie",
+        "mainMenu": "Revenir au menu principal",
+        "nextQuestion": "Question suivante",
+        "backToMenu": "Retour au menu principal",
+        "endQuiz": "Terminer le quiz",
+        "returningToMenuIn": "Retour au menu principal dans",
+        "seconds": "secondes"
+    }
+}

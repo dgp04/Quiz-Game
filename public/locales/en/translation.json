@@ -1,0 +1,19 @@
+{
+    "quiz": {
+        "title": "Quiz Game",
+        "setup": "Setup your quiz",
+        "selectLanguage": "Select language:",
+        "selectCategory": "Select Category:",
+        "numberOfQuestions": "Number of questions:",
+        "startQuiz": "Start Quiz",
+        "question": "Question",
+        "endOfQuiz": "End of the quiz! Your score is:",
+        "anyCategory": "Any Category",
+        "mainMenu": "Go to Main Menu",
+        "nextQuestion": "Next Question",
+        "backToMenu": "Back to Main Menu",
+        "endQuiz": "End Quiz",
+        "returningToMenuIn": "Returning to main menu in ",
+        "seconds": "seconds"
+    }
+}

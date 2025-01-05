@@ -1,0 +1,29 @@
+/* Contenedor principal del video y contenido */
+.background-video-container {
+    position: relative; /* Permite superponer el contenido encima del video */
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    overflow: hidden; /* Evita que el video se salga del contenedor */
+}
+
+/* Video de fondo */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubre todo sin distorsión */
+    z-index: 1; /* Mantén el video detrás */
+}
+
+/* Contenido encima del video */
+.overlay-content {
+    position: absolute; /* Superpuesto al video */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para centrar */
+    z-index: 2; /* Encima del video */
+    text-align: center; /* Opcional: centra el texto dentro */
+    color: white; /* Texto visible sobre el video */
+}

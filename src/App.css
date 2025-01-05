@@ -1,0 +1,248 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.quiz-config, .quiz-game{
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.quiz-config{
+  backdrop-filter: blur(15px);
+  border: 1px solid black;
+  color: black;
+}
+
+.quiz-header {
+  display: flex;
+  flex-direction: column;  /* Cambia la dirección del flex para que el botón esté encima del título */
+  gap: 5px;                /* Ajusta el espacio entre el botón y el h1 */
+}
+
+.quiz-header h1 {
+  margin: 0; /* Elimina el margen por defecto del h1 */
+  text-align: center;
+}
+
+#info-button{
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 0;
+}
+
+#info-button:active{
+  border: none;
+}
+
+.quiz-config select, .quiz-config input, .quiz-config button{
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.quiz-config input{
+  border: 1px solid black;
+}
+
+.quiz-config button{
+  width: 100%;
+}
+
+.quiz-config select{
+  width: 100%;
+}
+
+.quiz-config select, .quiz-config input{
+  background-color: white;
+  color: black;
+  font-size: 15px;
+}
+
+.quiz-config button{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: background-color .4s ease, color .4s ease;
+}
+
+.quiz-config button:hover{
+  background-color: black;
+  color: white;
+}
+
+.quiz-game-container {
+  max-width: 500px; /* Establece un ancho fijo para el contenedor de las preguntas */
+  width: 100%; /* Permite que sea responsivo en pantallas más pequeñas */
+  text-align: center; /* Centra el contenido del texto */
+  padding: 20px; /* Añade un poco de espacio interno */
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.quiz-game {
+  backdrop-filter: blur(10px);
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  text-align: center; /* Centra el texto */
+}
+
+.quiz-game button{
+  margin: 10px;
+  border: 1px solid white;
+  width: 100%;
+  background-color: black;
+}
+
+.question-info{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 5  px;
+  background-color: orange;
+  width: 100%;
+} 
+
+.question-info button{
+  width: 15%;
+  font-size: 12px;
+}
+
+.question-info h2:first-child{
+  flex: 1;
+  text-align: center;
+}
+
+.question-info h2:last-child {
+  flex-shrink: 0; /* Evita que se reduzca el ancho */
+  text-align: right; /* Alinea el número de la pregunta a la derecha */
+}
+
+.question-container{
+  background-color: white;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.progress-bar-container{
+  width: 99%;
+  height: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #66de0a; /* Color de la barra */
+  transition: width 0.s linear;
+}
+
+.answers{
+  display: grid;
+  text-align: center;
+  align-content: center;
+  margin-right: 20px;
+}
+
+.answers button{
+  color: black;
+  border: 2px solid black;
+}
+
+.answer.correct{
+  background-color: green;
+  color: white;
+}
+
+.question-buttons{
+  display: flex;
+  width: 100%;
+}
+
+.question-buttons button{
+  width: 1fr;
+}
+
+.end{
+  border: 1px solid black;
+  color: black;
+  display: grid;
+  backdrop-filter: blur(15px);
+  padding: 25px;
+}
+
+/* From Uiverse.io by mrpumps31232 */ 
+.loading-wave {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.loading-bar {
+  width: 20px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #3498db;
+  border-radius: 5px;
+  animation: loading-wave-animation 1s ease-in-out infinite;
+}
+
+.loading-bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading-bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loading-bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes loading-wave-animation {
+  0% {
+    height: 10px;
+  }
+
+  50% {
+    height: 50px;
+  }
+
+  100% {
+    height: 10px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
