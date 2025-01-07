@@ -95,3 +95,21 @@ To run the project locally, follow these steps:
 2. **Translation API**:
    - Provider: https://api.mymemory.translated.net/get?q=(text you want to transalte)}&langpair=en|(language you want to translate the texto to)
    - Usage: Translates questions into the selected language.
+
+## Contributing 
+We welcome contributions to improve this quiz application! Follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+3. Make your changes and commit:
+   ```bash
+   git commit -m "Add your feature description"
+4. Push to your branch:
+   ```bash
+   git push origin feature/your-feature-name
+5. Submit a pull request to the main branch.
+
+## License
+This project is licensed under the GPL License.
