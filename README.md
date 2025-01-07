@@ -70,10 +70,11 @@ To run the project locally, follow these steps:
 
 ## API References
 **YOU DON'T NEED AN API KEY TO USE THEM**
-1. **Trivia Questions API**
-    -- Endpoint: https://opentdb.com/api.php?amount=1&category=[category] (you can get the amount of questions you want and filter by categories)
-    -- Description: Fetches random trivia questions for the quiz.
-    -- Response Example:
+1. **Trivia Questions API**:
+    - Endpoint: https://opentdb.com/api.php?amount=1&category=[category] (you can get the amount of questions you want and filter by categories)
+    - Description: Fetches random trivia questions for the quiz.
+    - Response Example:
+      ```bash
       {
         "response_code": 0,
         "results": [
@@ -91,7 +92,6 @@ To run the project locally, follow these steps:
           }
         ]
       }
-2. Translation API
-  -- Provider: https://api.mymemory.translated.net/get?q=(text you want to transalte)}&langpair=en|(language you want to translate the texto to)
-  -- Usage: Translates questions into the selected language.
-
+2. **Translation API**:
+   - Provider: https://api.mymemory.translated.net/get?q=(text you want to transalte)}&langpair=en|(language you want to translate the texto to)
+   - Usage: Translates questions into the selected language.
