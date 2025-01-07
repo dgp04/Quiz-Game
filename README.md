@@ -49,15 +49,18 @@ To run the project locally, follow these steps:
    git clone https://github.com/your-username/quiz-application.git
    
 2. Navigate to the project directory:
+   ```bash
    cd quiz-application
    
-3. Install dependencies:
+4. Install dependencies:
+   ```bash
    npm install
 
-4. Run the development server:
+6. Run the development server:
+   ```bash
    npm run dev
 
-5. Click the link that npm run dev gives to you
+8. Click the link that npm run dev gives to you
 
 ## How to Use
 1. Start the Quiz: Click on the "Start Quiz" button to fetch new questions.
